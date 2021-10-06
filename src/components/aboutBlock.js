@@ -17,7 +17,6 @@ export default function AboutBlock() {
 
     let scrollTriggers = [];
 
-
     scrollTriggers = animateReveal(revealRefs.current);
 
     return () => {
@@ -32,7 +31,7 @@ export default function AboutBlock() {
   };
 
   return (
-    <Grid container>
+    <Grid container className="foo">
       <Grid
         item
         width={{ xs: "100%", sm: "80%", md: "35%" }}
@@ -44,6 +43,19 @@ export default function AboutBlock() {
           direction="column"
           alignItems={{ xs: "flex-start", sm: "flex-end" }}
         >
+
+          <Grid item
+            id="breaking"
+            ref={addToRevealRefs}
+            sx={{
+              "& img": {
+                height: 'auto',
+                width: '100%'
+              }
+            }}>
+          	<img width="717" height="947" src="https://bukk.it/%3F%3F%3F%3Fcone%3F%3F%3F%3F%3F%3F%3F%3F.jpg" alt="aa" onLoad={() => ScrollTrigger.refresh()} />
+          </Grid>
+
           <Grid item mt={{ xs: 0, md: "10vh" }} id="acum">
             <Typography
               variant="h5"
